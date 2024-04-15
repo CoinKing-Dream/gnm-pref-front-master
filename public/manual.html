@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <style>
+      .page {
+        position: relative;
+      }
+
+      .header {
+        height: 35px;
+        background-color: #3a1e87;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .contents {
+        margin-top: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <div class="page">
+            <div class="header">
+              <v-row no-gutters align="center" justify="end">
+                <v-col>
+                  <v-btn x-small class="ma-2" text @click="close" color="white">
+                    <v-icon left>mdi-chevron-left</v-icon> TOP画面
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </div>
+            <div>
+              <div class="container pa-4 container-fluid">
+                <div class="contents">
+                  <section>
+                    <h2 class="v-heading text-h4 text-sm-h4 mb-3">
+                      <a class="text-right text-md-left">
+                        #
+                      </a>
+                      タイトル
+                    </h2>
+                    <p>
+                      群馬県リアルタイム水害リスク | <a>GUNMA PREFECTURE</a>
+                    </p>
+                    <p>
+                      本文内容は<strong>こちら</strong>になります。<code
+                        >manual.html</code
+                      >
+                    </p>
+                  </section>
+                  <section>
+                    <v-divider class="mb-4"></v-divider>
+                    警告や参考になる内容
+                    <v-alert color="#2A3B4D" dark icon="mdi-firework" dense>
+                      Suspendisse enim turpis, dictum sed, iaculis a,
+                      condimentum nec, nisi. Vivamus quis mi. Quisque ut nisi.
+                      Maecenas malesuada.
+                    </v-alert>
+                    <v-alert outlined type="warning" prominent border="left">
+                      Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet
+                      iaculis, ipsum. Suspendisse non nisl sit amet velit
+                      hendrerit rutrum. Nullam vel sem. Pellentesque dapibus
+                      hendrerit tortor.
+                    </v-alert>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        methods: {
+          close() {
+            window.close();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
